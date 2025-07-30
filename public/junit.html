@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JUnit Testing in Java</title>
+  <style>
+    body {
+      background-color: #f1f1f1;
+      font-family: 'Segoe UI', sans-serif;
+      padding: 40px;
+      color: #333;
+    }
+
+    h1 {
+      color: #2c3e50;
+    }
+
+    code, pre {
+      background: #eaeaea;
+      padding: 10px;
+      border-radius: 6px;
+      display: block;
+      margin: 15px 0;
+      overflow-x: auto;
+    }
+
+    a {
+      display: inline-block;
+      margin-top: 30px;
+      text-decoration: none;
+      color: #007bff;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <h1>JUnit Testing in Java</h1>
+
+  <p>JUnit is a widely used testing framework in Java for unit testing individual components of software.</p>
+
+  <h2>✅ Key Features:</h2>
+  <ul>
+    <li>Simple annotations like <code>@Test</code>, <code>@Before</code>, <code>@After</code></li>
+    <li>Assertion methods like <code>assertEquals()</code>, <code>assertTrue()</code></li>
+    <li>Test automation support with Maven, Gradle, and IDEs</li>
+  </ul>
+
+  <h2>📌 Sample Test Case:</h2>
+  <pre><code>import static org.junit.Assert.*;
+import org.junit.Test;
+
+public class CalculatorTest {
+
+    @Test
+    public void testAdd() {
+        Calculator calc = new Calculator();
+        assertEquals(5, calc.add(2, 3));
+    }
+}</code></pre>
+
+  <a href="/">← Back to Home</a>
+</body>
+</html>

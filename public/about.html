@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>About | DemoApp</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    body {
+      background-color: #fdf6ec;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      padding: 40px;
+    }
+
+    .container {
+      background-color: #ffffff;
+      border-radius: 12px;
+      padding: 30px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+      max-width: 800px;
+      margin: auto;
+    }
+
+    textarea {
+      resize: none;
+    }
+
+    .info-box {
+      margin-top: 20px;
+      padding: 20px;
+      background-color: #eaf4f4;
+      border-left: 5px solid #3b6978;
+      border-radius: 8px;
+    }
+
+    .btn-custom {
+      background-color: #3b6978;
+      color: white;
+    }
+
+    .btn-custom:hover {
+      background-color: #204051;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1 class="mb-4">About This Page</h1>
+    <p>Describe any real-life situation, concept, or idea below. We'll generate a contextual explanation and related content for better understanding.</p>
+    
+    <div class="mb-3">
+      <label for="descBox" class="form-label">Your Description</label>
+      <textarea class="form-control" id="descBox" rows="5" placeholder="Describe a scene, idea, or situation..."></textarea>
+    </div>
+
+    <button onclick="generateInfo()" class="btn btn-custom">Generate Related Content</button>
+
+    <div class="info-box mt-4" id="resultBox" style="display: none;">
+      <h5>Related Content</h5>
+      <p id="relatedContent">Loading...</p>
+    </div>
+
+    <div class="mt-4">
+      <a href="/" class="btn btn-outline-dark">Back to Home</a>
+    </div>
+  </div>
+
+  <script>
+    function generateInfo() {
+      const input = document.getElementById("descBox").value.toLowerCase();
+      const result = document.getElementById("resultBox");
+      const content = document.getElementById("relatedContent");
+
+      let response = "";
+
+      if (input.includes("climate change")) {
+        response = "Climate change refers to long-term shifts in temperatures and weather patterns. It is largely driven by human activities, especially the burning of fossil fuels. Effects include rising sea levels, extreme weather events, and habitat disruption.";
+      } else if (input.includes("ai") || input.includes("artificial intelligence")) {
+        response = "Artificial Intelligence (AI) is the simulation of human intelligence in machines. It includes capabilities like learning, reasoning, and self-correction. AI powers tools such as chatbots, recommendation systems, and self-driving cars.";
+      } else if (input.includes("black hole")) {
+        response = "A black hole is a region in space where gravity is so strong that not even light can escape from it. Black holes are formed when massive stars collapse under their own gravity.";
+      } else if (input.trim().length < 5) {
+        response = "Please enter a more detailed description for meaningful insights.";
+      } else {
+        response = "Thanks for your input! Based on your description, we can provide related insights or scientific explanations using advanced models.";
+      }
+
+      content.textContent = response;
+      result.style.display = "block";
+    }
+  </script>
+
+</body>
+</html>
