@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Signup</title>
+  <script defer src="signup.js"></script>
+  <style>
+    body {
+      background: #f0f4f8;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .signup-container {
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 2px 16px rgba(0,0,0,0.07), 0 1.5px 8px rgba(0,0,0,0.05);
+      padding: 2.5em 2em;
+      width: 350px;
+      max-width: 100vw;
+      text-align: center;
+    }
+    .signup-container h2 {
+      margin-bottom: 1.5em;
+      color: #333;
+    }
+    .signup-container input[type="text"],
+    .signup-container input[type="email"],
+    .signup-container input[type="password"] {
+      width: 90%;
+      padding: 0.7em;
+      margin-bottom: 1em;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 1em;
+      transition: border-color 0.2s;
+    }
+    .signup-container input:focus {
+      outline: none;
+      border-color: #1976D2;
+    }
+    .signup-container button {
+      width: 97%;
+      padding: 0.8em;
+      border: none;
+      border-radius: 6px;
+      background-color: #1976D2;
+      color: white;
+      font-size: 1em;
+      font-weight: 600;
+      cursor: pointer;
+      margin-bottom: 1em;
+      transition: background-color 0.3s ease;
+    }
+    .signup-container button:hover {
+      background-color: #1154a3;
+    }
+    .signup-container p {
+      margin-top: 0;
+      font-size: 0.95em;
+    }
+    .signup-container a {
+      color: #1976D2;
+      text-decoration: none;
+      margin-left: 0.3em;
+      margin-right: 0.3em;
+    }
+    .signup-container a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="signup-container">
+    <h2>Signup</h2>
+    <form id="signupForm" autocomplete="off">
+      <input type="text" id="name" placeholder="Name" required /><br />
+      <input type="email" id="email" placeholder="Email" required /><br />
+      <input type="password" id="password" placeholder="Password" required /><br />
+      <button type="submit">Signup</button>
+    </form>
+    <p>
+      Already have an account?
+      <a href="login.html">Back to Login</a>
+    </p>
+  </div>
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Login</title>
+  <script defer src="login.js"></script>
+  <style>
+    body {
+      background: #f0f4f8;
+      font-family: 'Segoe UI', Arial, sans-serif;
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .login-container {
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 2px 16px rgba(0,0,0,0.07), 0 1.5px 8px rgba(0,0,0,0.05);
+      padding: 2.5em 2em;
+      min-width: 320px;
+      max-width: 100vw;
+      width: 350px;
+      text-align: center;
+    }
+    .login-container h2 {
+      margin-bottom: 1.5em;
+      color: #333;
+    }
+    .login-container input[type="email"],
+    .login-container input[type="password"] {
+      width: 90%;
+      padding: 0.7em;
+      margin-bottom: 1.1em;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 1em;
+      transition: border-color 0.2s;
+    }
+    .login-container input:focus {
+      outline: none;
+      border-color: #1976D2;
+    }
+    .login-container button {
+      width: 97%;
+      padding: 0.8em;
+      border: none;
+      border-radius: 6px;
+      background-color: #1976D2;
+      color: #fff;
+      font-size: 1em;
+      font-weight: bold;
+      cursor: pointer;
+      margin-bottom: 1em;
+      transition: background 0.2s;
+    }
+    .login-container button:hover {
+      background: #1154a3;
+    }
+    .login-container p {
+      margin: 0.8em 0 0;
+      font-size: 0.97em;
+    }
+    .login-container a {
+      color: #1976D2;
+      text-decoration: none;
+      margin: 0 0.3em;
+    }
+    .login-container a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="login-container">
+    <h2>Login</h2>
+    <form id="loginForm" autocomplete="off">
+      <input type="email" id="email" placeholder="Email" required /><br>
+      <input type="password" id="password" placeholder="Password" required /><br>
+      <button type="submit">Login</button>
+    </form>
+    <p>
+      <a href="signup.html">Signup</a>
+      |
+      <a href="#" id="forgotBtn">Forgot Password?</a>
+    </p>
+  </div>
+</body>
+</html>
